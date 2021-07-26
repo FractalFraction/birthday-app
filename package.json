@@ -1,0 +1,26 @@
+{
+  "name": "birthday-app",
+  "version": "1.0.0",
+  "description": "Your challenge is to build a web app that will ask the user for a name and birthday.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FractalFraction/birthday-app.git"
+  },
+  "author": "Colin Gardiner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FractalFraction/birthday-app/issues"
+  },
+  "homepage": "https://github.com/FractalFraction/birthday-app#readme",
+  "devDependencies": {
+    "cypress": "^8.0.0"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
