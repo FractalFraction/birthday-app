@@ -12,8 +12,8 @@ describe('test the birthday app', () => {
     cy.get("#day").type('26');
     cy.get("#month").select('July');
     cy.get("#submit-button").click();
-    cy.visit('/message');
-    cy.get("#message").should('contain',"Happy Birthday, Colin!");
+    cy.visit('/birthday');
+    cy.get("#birthday-message").should('contain',"Happy Birthday, Colin!");
   });
 
   it('returns awaiting birthday' , () => {
@@ -22,8 +22,8 @@ describe('test the birthday app', () => {
     cy.get("#day").type('30');
     cy.get("#month").select('July');
     cy.get("#submit-button").click();
-    cy.visit('/message');
-    cy.get("#message").should('contain',"Your birthday is in 4 days time, Colin");
+    cy.visit('/await');
+    cy.get("#await-message").should('contain',"Your birthday is in 4 days time, Colin");
   });
 
 });
