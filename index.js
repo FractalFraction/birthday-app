@@ -23,11 +23,10 @@ app.post('/message', (req, res) => {
   // Get today's date and compare with incoming data
 
   // If date is today render birthday.ejs
-
   // Else render await.ejs
-  res.render('await.ejs',{name: 'Harry',
-                          day: 30, 
-                          month: 'June'});
+  res.render('await.ejs',{name:  req.body.name,
+                          day: req.body.day, 
+                           month: req.body.month});
 })
 
 app.listen(port, () => {
