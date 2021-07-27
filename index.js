@@ -1,4 +1,5 @@
 const express = require('express');
+const ManipulateDate = require('manipulateDate');
 
 const app = express();
 const port = 3000;
@@ -7,17 +8,10 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({extended: true}));
 
 app.get('/', (req, res) => {
-  console.log('Rendering ejs to the page!');
   res.render('index.ejs');
 });
 
 app.post('/message', (req, res) => {
-  console.log('Made a post request!');
-  // console.log(res);
-  console.log(req.body.name);
-  console.log(req.body.day);
-  console.log(req.body.month);
-
   // Get the current date 
   const monthsArray = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 
@@ -31,6 +25,7 @@ app.post('/message', (req, res) => {
   console.log(`Returned Day: ${req.body.day}`);
   console.log(`Returned Month: ${req.body.month}`);
 
+  // Return the correct day difference
 
   if (req.body.day === currentDay && req.body.month === currentMonth) {
     res.render('birthday.ejs');

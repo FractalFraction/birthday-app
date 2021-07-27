@@ -4,7 +4,9 @@
   "description": "Your challenge is to build a web app that will ask the user for a name and birthday.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --exec babel-node src/index.js",
+    "test": "jest --testPathPattern=spec/",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -20,7 +22,8 @@
     "cypress": "^8.0.0",
     "eslint": "^7.31.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.23.4"
+    "eslint-plugin-import": "^2.23.4",
+    "jest": "^27.0.6"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
