@@ -19,13 +19,10 @@ class MonthTable {
   getDaysBetweenMonth(month1, month2) {
     //  Assumes the months are integers as written in the calendar. e.g Jan is 1, Feb is 2
     if (month2 > month1) {
-      console.log(this.monthDays.slice(month1 - 1, month2));
       return this.monthDays.slice(month1 - 1, month2);
     }
     const days1 = this.monthDays.slice(month1 - 1);
     const days2 = this.monthDays.slice(0, month2);
-    console.log(days1);
-    console.log(days2);
     return days1.concat(days2);
   }
 }

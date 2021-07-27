@@ -19,7 +19,6 @@ describe('Test the month table class', () => {
     const month2 = monthTable.getMonthNumber('April')
     expect(monthTable.getDaysBetweenMonth(month1,month2)).toEqual([31,30,31,31,28,31,30]);
   })
-
   
 });
 
