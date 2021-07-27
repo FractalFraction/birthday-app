@@ -1,5 +1,5 @@
 const express = require('express');
-const ManipulateDate = require('manipulateDate');
+const DateDifference = require('./src/dateDifference.js');
 
 const app = express();
 const port = 3000;

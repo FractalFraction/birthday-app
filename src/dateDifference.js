@@ -1,29 +1,33 @@
+const MonthTable = require('./monthTable.js');
+
 class dateDifference {
-  constructor (day = 1, month = 'January') {
+  constructor (today = new Date(), day = 1, month = 'January') {
+    this.today = today;
     this.day = day;
     this.month = month;
-    this.monthTable = {
-      January: 1,
-      February: 2,
-      March: 3,
-      April: 4,
-      May: 5,
-      June: 6,
-      July: 7,
-      August: 8,
-      September: 9,
-      October: 10,
-      November: 11,
-      December: 12,
-    };
+    this.monthTable = new MonthTable();
   }
 
-  monthToNum () {
-    return this.monthTable[this.month];
+  setState(today, day, month,){
+    this.today = today || this.today;
+    this.day = day || this.day;
+    this.month = month || this.month;    
   }
 
-  getDifference () {
+  monthToNum() {
+    console.log(this.month);
+    return this.monthTable.getMonthNumber(this.month)
+  }
 
+  monthDiff () {
+    this.monthTable.getMonthNumber(this.month);
+  }
+
+  dayDiff () {
+    this.today.getDate() 
+    this.today.getMonth()   
+
+    return 
   }
 
 }
